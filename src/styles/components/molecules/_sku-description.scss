@@ -5,22 +5,19 @@
     @include flex(column, start);
     gap: $spacing-xs;
 
+    &__content {
+        width: 100%;
+    }
+
     &__body{
         color: $secondary-color;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
-        &--expanded {
-            -webkit-line-clamp: unset;
-            max-height: none;
-        }        
+        margin: 0;
 
         &--read-more{
             color: $primary-color;
             font-weight: $font-weight-bold;
             cursor: pointer;
+            margin-left: 0.25rem;
         }
     }
 }

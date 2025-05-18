@@ -1,34 +1,30 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ProductPropTypes } from '../../../models/productModel'
 
 export const SkuDescription = ({ product }) => {
   const [expanded, setExpanded] = useState(false);
-  const [isTruncated, setIsTruncated] = useState(false);
-  const bodyRef = useRef(null);
-
-  useEffect(() => {
-    const el = bodyRef.current;
-    if (!el) return;    
-    setIsTruncated(el.scrollHeight > el.clientHeight);
-  }, [product.information, expanded]);  
+  const maxLength = 150;
+  const isTruncated = product.information.length > maxLength;
+  const displayText = expanded 
+    ? product.information 
+    : `${product.information.slice(0, maxLength)}...`;
 
   return (
     <div className="sku-description">
       <h3 className="sku-description__title">Description</h3>
-      <p
-        className={`sku-description__body ${expanded && 'sku-description__body--expanded'}`}
-        ref={bodyRef}
-      >
-        {product.information}             
-      </p>
-      {isTruncated && !expanded && (
-          <span
-            className="sku-description__body--read-more"
-            onClick={() => setExpanded(true)}
-          >
-            {' '}Read more
-          </span>
-        )}   
+      <div className="sku-description__content">
+        <p className="sku-description__body">
+          {displayText}
+          {isTruncated && !expanded && (
+            <span
+              className="sku-description__body--read-more"
+              onClick={() => setExpanded(true)}
+            >
+              Read more
+            </span>
+          )}
+        </p>
+      </div>
     </div>
   );
 };
