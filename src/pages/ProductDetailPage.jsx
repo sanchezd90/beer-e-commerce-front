@@ -36,6 +36,13 @@ const ProductDetail = () => {
     alert('show options');
   }
 
+  const pngMap = {
+    "/products/modelo-especial.jpeg":"/icons/modelo-especial.png",
+    "/products/miller-lite.png":"/icons/miller-lite.png",
+    "/products/corona.jpg":"/icons/corona.png",
+    "/products/budweiser.jpg":"/icons/budweiser.png",
+  }
+
   if (shouldRedirect) {
     return <Navigate to="/products" replace />;
   }
@@ -53,7 +60,7 @@ const ProductDetail = () => {
       </Nav>
       <img 
         className="product-details-page__image" 
-        src={`/src/assets${activeProduct?.image}`} 
+        src={`/src/assets${pngMap?.[activeProduct?.image]}`} 
         alt="product" 
       />
       <ProductDetails product={activeProduct} sku={activeSku} setSelectedSku={setActiveSku} />

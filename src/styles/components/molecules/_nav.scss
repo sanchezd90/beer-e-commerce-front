@@ -2,5 +2,5 @@
 
 .nav {
     width: 100%;
-    @include flex(row, space-between);    
+    @include flex(row, space-between, center);    
 }
