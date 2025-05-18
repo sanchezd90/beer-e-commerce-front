@@ -11,9 +11,9 @@ const fetchStockPrice = async (id) => {
     } catch (error) {
         if (error.response) {
             const status = error.response.status;
-            const message = error.response.data?.error || 'An error occurred while fetching stock price';
+            const message = error.response.data?.error || 'An error occurred while fetching stock price';            
             throw { status, message };        
-        } else {
+        } else {                       
             throw { status: 0, message: 'Error' };
         }
     }
@@ -26,10 +26,7 @@ export const useStockPrice = (id) => {
         refetchInterval: 5000, 
         refetchIntervalInBackground: true,
         retry: (failureCount, error) => {
-            if (error?.status === 404) {
-                return false;
-            }
-            return failureCount < 3;
+            return !!error.response;
         }
     })
 }
