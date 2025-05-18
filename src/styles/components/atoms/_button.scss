@@ -1,9 +1,11 @@
+@use '../../abstracts/variables' as *;
+
 .button {
     height: 54px;
     border-radius: 12px;
 
     &--primary {
-        background-color: $color-primary;
+        background-color: $primary-color;
         color: $white-color;
         width: 257px;
         font-size: 16px;
@@ -13,12 +15,12 @@
 
     &--icon {
         background-color: transparent;
-        color: $color-primary;
+        color: $primary-color;
         width: 54px;
     }
 
     &--add {
-        background-color: $color-primary;
+        background-color: $primary-color;
         color: $white-color;        
         width: 40px;
         height: 40px;

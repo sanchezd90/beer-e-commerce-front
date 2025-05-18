@@ -1,3 +1,6 @@
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/variables' as *;
+
 .sku-size-picker {
     @include flex(column);
     gap: $spacing-md;

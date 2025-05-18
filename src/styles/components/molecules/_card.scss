@@ -1,8 +1,10 @@
+@use '../../abstracts/variables' as *;
+
 .card {
     width: 155px;
     height: 195px;        
     border-radius: 12px 0 0 12px;
-    background-color: $color-white;
+    background-color: $white-color;
     position: relative;
     display: flex;
     flex-direction: column;

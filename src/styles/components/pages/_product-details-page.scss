@@ -1,3 +1,6 @@
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/variables' as *;
+
 .product-details-page{
     @include flex(column, start);
     gap: $spacing-md;
