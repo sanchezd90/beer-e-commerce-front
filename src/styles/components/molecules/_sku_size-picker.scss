@@ -3,10 +3,10 @@
 
 .sku-size-picker {
     @include flex(column);
-    gap: $spacing-md;
+    gap: $spacing-xs;
 
     &__pills {
         @include flex(row, start, center, wrap);
-        gap: $spacing-md;
+        gap: $spacing-sm;
     }
 }

@@ -1,14 +1,17 @@
 @use '../../abstracts/variables' as *;
-
+@use '../../abstracts/mixins' as *;
 .pill {
     background-color: transparent;
     border-radius: 15.5px;
-    border: 1px solid $secondary-color;    
-    width: 87px;
+    border: 1px solid $secondary-color;        
     height: 31px;
+    padding: 0 $spacing-xs;
     cursor: pointer;
+    @include flex(row, center, center);
+    
     &--active {
         border-color: $primary-color;
+        color: $primary-color;
     }
 
     &__text {

@@ -1,15 +1,17 @@
 @use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins' as *;
 
-.product-details {
-    width: 100vw;
+.product-details {    
     overflow-x: hidden;
-
+    margin-bottom: -$spacing-lg;
+    margin-left: calc(($spacing-md + 9px) * -1);
+    
     &__card {
-        margin-left: -9px;
+        padding: $spacing-xxl $spacing-sm $spacing-md $spacing-lg;
         @include flex(column);
-        gap: $spacing-md;
+        gap: $spacing-lg;
         background-color: $white-color;
         border-radius: 48px 48px 0 0;    
+        
     }
 }

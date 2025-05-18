@@ -3,10 +3,14 @@
 
 .sku-header {
     @include flex(column);
-    gap: $spacing-md;
+    gap: $spacing-xs;
     
     &__brand-price {
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, center);        
+
+        &--price {                        
+            color: $primary-color;
+        }
     }
 
     &__origin-stock {

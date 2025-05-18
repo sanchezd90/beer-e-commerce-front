@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 export const ProductDetails = ({product, sku, setSelectedSku}) => {  
   return (
     <section className="product-details">
-        <div className="container product-details__card">
+        <div className="product-details__card">
             <SkuHeader product={product} sku={sku}/>
             <SkuDescription product={product} />
             <SizePicker product={product} selectedSku={sku} setSelectedSku={setSelectedSku}/>

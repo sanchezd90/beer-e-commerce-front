@@ -9,8 +9,8 @@ export const SkuHeader = ({product, sku}) => {
     return (
         <div className="sku-header">
             <div className="sku-header__brand-price">
-                <h3 className="sku-header__brand">{product.brand}</h3>
-                <p className="sku-header__price">${stockPrice?.price && stockPrice.price/100}</p>
+                <h1>{product.brand}</h1>
+                <h1 className="sku-header__brand-price--price">${stockPrice?.price && stockPrice.price/100}</h1>
             </div>
             <p className="sku-header__origin-stock">Origin: {product.origin} | Stock: {stockPrice?.stock}</p>
         </div>

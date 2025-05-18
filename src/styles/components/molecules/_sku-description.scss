@@ -3,7 +3,7 @@
 
 .sku-description {
     @include flex(column, start);
-    gap: $spacing-md;
+    gap: $spacing-xs;
 
     &__body{
         color: $secondary-color;

@@ -10,11 +10,13 @@ export const SizePicker = ({product, setSelectedSku, selectedSku}) => {
   }
 
   return (
-    <div>
+    <div className="sku-size-picker">
         <h3>Size</h3>
-        {product.skus.map((sku) => (
-            <Pill key={sku.code} text={sku.name} active={sku.code === selectedSku} onClick={()=>handleClick(sku)}/>                            
-        ))}
+        <div className="sku-size-picker__pills">
+          {product.skus.map((sku) => (
+              <Pill key={sku.code} text={sku.name} active={sku === selectedSku} onClick={()=>handleClick(sku)}/>                            
+          ))}
+        </div>
 
     </div>
   )

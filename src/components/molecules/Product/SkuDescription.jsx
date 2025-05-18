@@ -19,16 +19,16 @@ export const SkuDescription = ({ product }) => {
         className={`sku-description__body ${expanded && 'sku-description__body--expanded'}`}
         ref={bodyRef}
       >
-        {product.information}
-        {isTruncated && !expanded && (
+        {product.information}             
+      </p>
+      {isTruncated && !expanded && (
           <span
             className="sku-description__body--read-more"
             onClick={() => setExpanded(true)}
           >
             {' '}Read more
           </span>
-        )}        
-      </p>
+        )}   
     </div>
   );
 };
