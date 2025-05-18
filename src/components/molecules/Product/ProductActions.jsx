@@ -6,11 +6,11 @@ import { ProductPropTypes, SkuPropTypes } from '../../../models/productModel'
 export const ProductActions = ({product, sku}) => {
 
     const handleBagClick = () => {
-        alert('bag clicked for ' + product.brand + ' ' + sku.name)
+        alert('bag clicked for product id:' + product.id + ' and sku code:' + sku.code)
     }
 
     const handleAddToCart = () => {
-        alert('add to cart clicked for ' + product.brand + ' ' + sku.name)
+        alert('add to cart clicked for product id:' + product.id + ' and sku code:' + sku.code)
     }
 
     return (

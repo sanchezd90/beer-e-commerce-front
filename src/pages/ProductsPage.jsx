@@ -1,8 +1,6 @@
 import React from 'react';
 import { Nav, Toggle, Avatar } from '../components';
 import { ProductList } from '../components/index';
-import menuIcon from '../assets/icons/menu-icon.svg';
-import avatar from '../assets/icons/Sin título-1.jpg';
 
 const Products = () => {
 

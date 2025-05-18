@@ -11,5 +11,6 @@ export const Avatar = ({ src, alt='user', onClick }) => {
 
 Avatar.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  onClick: PropTypes.func
 }

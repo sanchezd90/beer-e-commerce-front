@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pill } from '../../index'
-import { ProductPropTypes } from '../../../models/productModel'
+import { ProductPropTypes, SkuPropTypes } from '../../../models/productModel'
 import PropTypes from 'prop-types'
 
 export const SizePicker = ({product, setSelectedSku, selectedSku}) => {
@@ -24,5 +24,6 @@ export const SizePicker = ({product, setSelectedSku, selectedSku}) => {
 
 SizePicker.propTypes = {
     product: ProductPropTypes,
-    setSelectedSku: PropTypes.func.isRequired
+    setSelectedSku: PropTypes.func.isRequired,
+    selectedSku: SkuPropTypes
 }

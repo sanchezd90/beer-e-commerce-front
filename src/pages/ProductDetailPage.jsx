@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const navigate = useNavigate()
 
   const { id } = useParams();
-  const [productId, _productBrand] = id.split(/-(.+)/)
+  const productId = id.split(/-(.+)/)?.[0]
   const { data: products, isLoading: loadingProducts } = useProducts(); 
   
   const [activeProduct, setActiveProduct] = useState(null);
@@ -28,7 +28,7 @@ const ProductDetail = () => {
   }, [productId,loadingProducts,products]);  
 
   const handleBack = () => {    
-    navigate(`/products`)
+    navigate(`/products`);
   }
 
   const handleDots = () => {
@@ -43,7 +43,8 @@ const ProductDetail = () => {
   }
 
   if (shouldRedirect) {
-    return <Navigate to="/products" replace />;
+    navigate('/products', { replace: true });
+    return null;
   }
 
   if (loadingProducts || !activeProduct) {

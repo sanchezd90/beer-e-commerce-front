@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
-import { ProductCard, Loader } from '../index'
+import React from 'react'
+import { ProductCard} from '../index'
 import { ProductPropTypes } from '../../models/productModel'
 import PropTypes from 'prop-types'
 import { useProducts } from '../../hooks/useProducts'
