@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
 import { Nav, ProductDetails, Toggle, Loader } from '../components/index';
 import iconBack from '../assets/icons/icon-back.svg';
 import iconDots from '../assets/icons/icon-dots.svg';
 
 const ProductDetail = () => {    
+
+  const navigate = useNavigate()
 
   const { id } = useParams();
   const [productId, _productBrand] = id.split(/-(.+)/)
@@ -28,7 +30,8 @@ const ProductDetail = () => {
   }, [productId,loadingProducts,products]);  
 
   const handleBack = () => {
-    return <Navigate to="/products" replace />
+    console.log('back');
+    navigate(`/products`)
   }
 
   const handleDots = () => {
@@ -46,12 +49,12 @@ const ProductDetail = () => {
   return (
     <div className="product-details-page">      
       <Nav>
-        <Toggle>
-          <img src={iconBack} alt="back" onClick={handleBack} />
+        <Toggle onClick={handleBack}>
+          <img src={iconBack} alt="back"  />
         </Toggle>        
         <p className="product-details-page__nav-text">Details</p>
-        <Toggle>
-          <img src={iconDots} alt="dots" onClick={handleDots} />
+        <Toggle onClick={handleDots}>
+          <img src={iconDots} alt="dots"  />
         </Toggle>
       </Nav>
       <img 

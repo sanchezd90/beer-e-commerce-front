@@ -4,7 +4,7 @@ import { ProductPropTypes, SkuPropTypes } from '../../../models/productModel'
 
 export const SkuHeader = ({product, sku}) => {
 
-    const {stockPrice} = useStockPrice(sku.code);
+    const {data: stockPrice} = useStockPrice(sku.code);
 
     return (
         <div className="sku-header">

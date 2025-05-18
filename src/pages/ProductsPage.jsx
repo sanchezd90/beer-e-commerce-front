@@ -5,13 +5,22 @@ import menuIcon from '../assets/icons/menu-icon.svg';
 import avatar from '../assets/icons/Sin título-1.jpg';
 
 const Products = () => {
+
+  const handleMenuClick = () => {
+    alert('expand navbar');
+  }
+
+  const handleProfileClick = () => {
+    alert('go to profile page');
+  }
+
   return (
     <div className="products-page">
       <Nav>
-        <Toggle>
+        <Toggle onClick={handleMenuClick}>
           <img src={menuIcon} alt="menu" />
         </Toggle>
-        <Toggle>
+        <Toggle onClick={handleProfileClick}>
           <Avatar src={avatar} alt="avatar" />
         </Toggle>
       </Nav>
