@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const Toggle = ({ src, alt='toggle', onClick }) => {
   return (
     <button className="toggle" onClick={onClick}>
-      <img src={src} alt={alt} />
+      <img className="toggle__icon" src={src} alt={alt} />
     </button>
   )
 }

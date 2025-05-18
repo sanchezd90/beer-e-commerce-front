@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Avatar = ({ src, alt='user' }) => {
+export const Avatar = ({ src, alt='user', onClick }) => {
   return (
-    <div className={`avatar`}>
+    <button className={`avatar`} onClick={onClick}>
       <img src={src} alt={alt} />
-    </div>
+    </button>
   )
 }
 

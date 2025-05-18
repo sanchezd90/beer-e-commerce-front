@@ -7,7 +7,7 @@
 
     &__header{
         @include flex(column, start);
-        gap: $spacing-sm;
+        gap: $spacing-xs;
 
         &--gretting{
             font-size: 16px;            

@@ -12,7 +12,7 @@ export const ProductList = () => {
         <h2>Our Products</h2>        
         <div className="product-list__grid">
             {products?.map((product, index) => (
-                <ProductCard key={product.id} product={product} reverse={index % 2 === 0} />
+                <ProductCard key={product.id} product={product} reverse={index % 2 !== 0} />
             ))}
         </div>        
     </section>

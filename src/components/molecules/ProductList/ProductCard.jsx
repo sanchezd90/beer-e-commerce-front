@@ -12,7 +12,7 @@ export const ProductCard = ({product, reverse}) => {
 
     const handleAddToCart = (e) => {
         e.stopPropagation()
-        alert(`${product.brand} ${sku.name} added to cart`)
+        alert(`${product.brand} ${product.skus[0].name} added to cart`)
     }
 
     const handleSelectProduct = () => {       
@@ -28,10 +28,14 @@ export const ProductCard = ({product, reverse}) => {
           className="card__image" 
         />
         <div className="card__price-rating">
-            <Rating rating={product.rating} />
+            {product.rating && <Rating rating={product.rating} />}
             <p className="card__price">${sku?.price/100}</p>
         </div>
-        <Button variant="add" onClick={handleAddToCart}>Add to cart</Button>
+        <div className="card__button">
+          <Button variant="add" onClick={handleAddToCart}>
+            <p className="card__button-text">+</p>
+          </Button>
+        </div>
     </article>
   )
 }

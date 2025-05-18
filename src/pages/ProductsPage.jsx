@@ -15,14 +15,10 @@ const Products = () => {
   }
 
   return (
-    <div className="products-page">
+    <div className="container products-page">
       <Nav>
-        <Toggle onClick={handleMenuClick}>
-          <img src={menuIcon} alt="menu" />
-        </Toggle>
-        <Toggle onClick={handleProfileClick}>
-          <Avatar src={avatar} alt="avatar" />
-        </Toggle>
+        <Toggle src={'/src/assets/icons/menu-icon.svg'} alt="menu" onClick={handleMenuClick} />
+        <Avatar src={'/src/assets/icons/Sin título-1.jpg'} alt="avatar" onClick={handleProfileClick} />
       </Nav>
       <div className="products-page__header">
         <p className="products-page__header--gretting">Hi Mr. Michael</p>

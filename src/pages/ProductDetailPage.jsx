@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
 import { Nav, ProductDetails, Toggle, Loader } from '../components/index';
-import iconBack from '../assets/icons/icon-back.svg';
-import iconDots from '../assets/icons/icon-dots.svg';
 
 const ProductDetail = () => {    
 
@@ -47,15 +45,11 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="product-details-page">      
+    <div className="container product-details-page">      
       <Nav>
-        <Toggle onClick={handleBack}>
-          <img src={iconBack} alt="back"  />
-        </Toggle>        
+        <Toggle src={'/src/assets/icons/icon-back.svg'} alt="back" onClick={handleBack} />        
         <p className="product-details-page__nav-text">Details</p>
-        <Toggle onClick={handleDots}>
-          <img src={iconDots} alt="dots"  />
-        </Toggle>
+        <Toggle src={'/src/assets/icons/icon-dots.svg'} alt="dots" onClick={handleDots} />
       </Nav>
       <img 
         className="product-details-page__image" 
