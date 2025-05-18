@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;  
-    padding: $spacing-xs;
+    padding: $spacing-xs $spacing-xs $spacing-xxs;
 
     &--reverse{
         border-radius: 32px 12px 0 12px;
