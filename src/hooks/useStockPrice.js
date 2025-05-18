@@ -25,7 +25,7 @@ export const useStockPrice = (id) => {
         queryFn: () => fetchStockPrice(id),
         refetchInterval: 5000, 
         refetchIntervalInBackground: true,
-        retry: (failureCount, error) => {
+        retry: (_failureCount, error) => {
             return !!error.response;
         }
     })

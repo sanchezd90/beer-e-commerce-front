@@ -27,8 +27,7 @@ const ProductDetail = () => {
     }
   }, [productId,loadingProducts,products]);  
 
-  const handleBack = () => {
-    console.log('back');
+  const handleBack = () => {    
     navigate(`/products`)
   }
 

@@ -12,11 +12,11 @@ const fetchProducts = async () => {
       const status = error.response.status;
       const message = error.response.data?.error || 'An error occurred while fetching products';      
       alert(message);
-      throw { status, message };
+      throw { status, message };      
     } else {
       alert('Server error');
       throw { status: 0, message: 'Server error' };
-    }
+    }    
   }
 }
 
@@ -24,7 +24,7 @@ export const useProducts = () => {
   return useQuery({
     queryKey: ['products'],
     queryFn: fetchProducts,
-    retry: (failureCount, error) => {
+    retry: (_failureCount, error) => {
       return !!error.response;
     }
   })  
