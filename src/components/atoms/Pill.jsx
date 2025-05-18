@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Pill = ({ text, active=false, onClick }) => {
+export const Pill = ({ text, active=false, onClick }) => {
   return (
     <div className={`pill ${active ? 'pill--active' : ''}`} onClick={onClick}>
         <p className="pill__text">{text}</p>
@@ -14,5 +14,3 @@ Pill.propTypes = {
   active: PropTypes.bool,
   onClick: PropTypes.func
 }
-
-export default Pill

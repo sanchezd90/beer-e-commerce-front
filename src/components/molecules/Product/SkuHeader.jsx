@@ -1,7 +1,8 @@
 import React from 'react'
 import {useStockPrice} from '../../../hooks/useStockPrice'
 import { ProductPropTypes, SkuPropTypes } from '../../../models/productModel'
-const SkuHeader = ({product, sku}) => {
+
+export const SkuHeader = ({product, sku}) => {
 
     const {stockPrice} = useStockPrice(sku.code);
 
@@ -20,5 +21,3 @@ SkuHeader.propTypes = {
     product: ProductPropTypes,
     sku: SkuPropTypes
 }
-
-export default SkuHeader;

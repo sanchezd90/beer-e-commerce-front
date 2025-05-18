@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
-import { Nav, ProductDetails } from '../components/index';
+import { Nav, ProductDetails, Toggle, Loader } from '../components/index';
 import iconBack from '../assets/icons/icon-back.svg';
 import iconDots from '../assets/icons/icon-dots.svg';
 
@@ -12,7 +12,6 @@ const ProductDetail = () => {
   const { data: products, isLoading: loadingProducts } = useProducts(); 
   
   const [activeProduct, setActiveProduct] = useState(null);
-  const [activeTab, setActiveTab] = useState(0);
   const [activeSku, setActiveSku] = useState(null);
   const [shouldRedirect, setShouldRedirect] = useState(false);
   
@@ -21,17 +20,12 @@ const ProductDetail = () => {
       const currentProduct = products.find((product) => product.id == productId);      
       if(currentProduct) {
         setActiveProduct(currentProduct); 
-        updateTab(currentProduct, 0);       
+        setActiveSku(currentProduct.skus[0]);
       }else{
         setShouldRedirect(true);
       }
     }
   }, [productId,loadingProducts,products]);  
-
-  const updateTab = (product, tabIndex) => {
-    setActiveTab(tabIndex);
-    setActiveSku(product.skus[0]);
-  }
 
   const handleBack = () => {
     return <Navigate to="/products" replace />
@@ -45,21 +39,29 @@ const ProductDetail = () => {
     return <Navigate to="/products" replace />;
   }
 
+  if (loadingProducts || !activeProduct) {
+    return <Loader />;
+  }
+
   return (
-    <div className="product-details-page">
+    <div className="product-details-page">      
       <Nav>
-      <Toggle />
+        <Toggle>
           <img src={iconBack} alt="back" onClick={handleBack} />
-        <Toggle />
+        </Toggle>        
         <p className="product-details-page__nav-text">Details</p>
-        <Toggle />
+        <Toggle>
           <img src={iconDots} alt="dots" onClick={handleDots} />
-        <Toggle />
+        </Toggle>
       </Nav>
-      <img className="product-details-page__image" src={activeProduct.image} alt="product" />
-      <ProductDetails product={activeProduct} />
+      <img 
+        className="product-details-page__image" 
+        src={`/src/assets${activeProduct?.image}`} 
+        alt="product" 
+      />
+      <ProductDetails product={activeProduct} sku={activeSku} setSelectedSku={setActiveSku} />
     </div>
   );
 };
 
-export default React.memo(ProductDetail); 
+export default ProductDetail; 

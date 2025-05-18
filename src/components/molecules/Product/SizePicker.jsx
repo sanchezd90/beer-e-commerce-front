@@ -3,19 +3,17 @@ import { Pill } from '../../index'
 import { ProductPropTypes } from '../../../models/productModel'
 import PropTypes from 'prop-types'
 
-const SizePicker = ({product, setSelectedSku}) => {
+export const SizePicker = ({product, setSelectedSku, selectedSku}) => {
 
-  const handleClick = (skuCode) => {
-    setSelectedSku(skuCode)
+  const handleClick = (sku) => {
+    setSelectedSku(sku)
   }
 
   return (
     <div>
         <h3>Size</h3>
         {product.skus.map((sku) => (
-            <Pill key={sku.code} onClick={()=>handleClick(sku.code)}>
-                <p>{sku.name}</p>
-            </Pill>
+            <Pill key={sku.code} text={sku.name} active={sku.code === selectedSku} onClick={()=>handleClick(sku)}/>                            
         ))}
 
     </div>
@@ -26,5 +24,3 @@ SizePicker.propTypes = {
     product: ProductPropTypes,
     setSelectedSku: PropTypes.func.isRequired
 }
-
-export default SizePicker

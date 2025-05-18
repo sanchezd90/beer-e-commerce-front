@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ProductPropTypes } from '../../../models/productModel'
 
-const SkuDescription = ({ product }) => {
+export const SkuDescription = ({ product }) => {
   const [expanded, setExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const bodyRef = useRef(null);
@@ -36,5 +36,3 @@ const SkuDescription = ({ product }) => {
 SkuDescription.propTypes = {
   product: ProductPropTypes
 }
-
-export default SkuDescription;

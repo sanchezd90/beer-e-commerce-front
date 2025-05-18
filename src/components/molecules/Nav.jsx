@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Nav = ({children}) => {
+export const Nav = ({children}) => {
   return (
     <nav className="nav">
         {children}
@@ -11,5 +12,3 @@ const Nav = ({children}) => {
 Nav.propTypes = {
     children: PropTypes.node.isRequired
 }
-
-export default Nav

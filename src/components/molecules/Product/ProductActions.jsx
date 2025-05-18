@@ -3,7 +3,7 @@ import { Button } from '../../index'
 import bagIcon from '../../../assets/icons/icon-bag.svg'
 import { ProductPropTypes, SkuPropTypes } from '../../../models/productModel'
 
-const ProductActions = ({product, sku}) => {
+export const ProductActions = ({product, sku}) => {
 
     const handleBagClick = () => {
         alert('bag clicked for ' + product.brand + ' ' + sku.name)
@@ -27,5 +27,3 @@ ProductActions.propTypes = {
     product: ProductPropTypes,
     sku: SkuPropTypes
 }
-
-export default ProductActions

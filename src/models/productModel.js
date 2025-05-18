@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
 
+
+export const SkuPropTypes = {
+    code: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    stock: PropTypes.number,
+    price: PropTypes.number,
+}
+
 export const ProductPropTypes = {
     id: PropTypes.number.isRequired,
     brand: PropTypes.string.isRequired,
@@ -13,11 +21,3 @@ export const ProductPropTypes = {
     skus: PropTypes.arrayOf(SkuPropTypes).isRequired,
 };
 
-export const SkuPropTypes = {
-    code: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    stock: PropTypes.number,
-    price: PropTypes.number,
-}
-
-export default ProductPropTypes;

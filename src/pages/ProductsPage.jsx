@@ -1,16 +1,19 @@
 import React from 'react';
 import { Nav, Toggle, Avatar } from '../components';
-import { ProductList } from '../components/organisms';
+import { ProductList } from '../components/index';
 import menuIcon from '../assets/icons/menu-icon.svg';
+import avatar from '../assets/icons/Sin título-1.jpg';
 
 const Products = () => {
   return (
     <div className="products-page">
       <Nav>
-        <Toggle />
+        <Toggle>
           <img src={menuIcon} alt="menu" />
-        <Toggle />
-        <Avatar />
+        </Toggle>
+        <Toggle>
+          <Avatar src={avatar} alt="avatar" />
+        </Toggle>
       </Nav>
       <div className="products-page__header">
         <p className="products-page__header--gretting">Hi Mr. Michael</p>

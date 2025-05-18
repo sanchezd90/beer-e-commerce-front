@@ -1,11 +1,13 @@
 import React from 'react';
-
-const Loader = () => {
+import PropTypes from 'prop-types';
+export const Loader = () => {
   return (
-    <div class="loader">
-      <div class="loader__spinner"></div>    
+    <div className="loader">
+      <div className="loader__spinner"></div>    
     </div>
   );
 };
 
-export default Loader; 
+Loader.propTypes = {
+  loading: PropTypes.bool.isRequired
+}
