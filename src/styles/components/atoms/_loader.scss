@@ -1,0 +1,33 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32, 37, 43, 0.9);
+    font-family: var(--font-family-roboto-medium);
+    flex-direction: column;
+    text-align: center;
+
+    &__spinner {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 8px solid;
+        border-color: #FFFF transparent;
+        animation: l1 1s infinite;
+    }
+
+    @keyframes l1 {to{transform: rotate(.5turn)}}
+    @keyframes l3 {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+  }
+   

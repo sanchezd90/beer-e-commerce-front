@@ -1,0 +1,27 @@
+.button {
+    height: 54px;
+    border-radius: 12px;
+
+    &--primary {
+        background-color: $color-primary;
+        color: $white-color;
+        width: 257px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &--icon {
+        background-color: transparent;
+        color: $color-primary;
+        width: 54px;
+    }
+
+    &--add {
+        background-color: $color-primary;
+        color: $white-color;        
+        width: 40px;
+        height: 40px;
+        border-radius: 0px 8px 0px 8px;
+    }
+}

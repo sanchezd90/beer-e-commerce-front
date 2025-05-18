@@ -1,0 +1,6 @@
+@use '../../abstracts/mixins' as *;
+
+.nav {
+    width: 100%;
+    @include flex(row, space-between);    
+}

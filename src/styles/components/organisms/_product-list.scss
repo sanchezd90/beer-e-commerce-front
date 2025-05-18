@@ -1,0 +1,10 @@
+@use '../../abstracts/mixins' as *;
+
+.product-list {
+    @include flex(column, start);
+    gap: $spacing-md;
+
+    &__grid{
+        @include grid(2);
+    }
+}

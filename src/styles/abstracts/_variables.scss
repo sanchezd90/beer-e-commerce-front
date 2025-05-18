@@ -1,0 +1,32 @@
+
+
+// Colors
+$primary-color: #FF9F24;
+$secondary-color: #969696;
+$medium-color: #808080;
+$medium-dark-color: #646464;
+$dark-color: #323232;
+$deep-dark-color: #0F0D23;
+$light-color: #FAFAFA;
+$white-color: #FFFFFF;
+
+// Typography
+$font-family-base: 'MD Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 14px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 24px;
+
+// Spacing
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit;
+$spacing-sm: $spacing-unit * 2;
+$spacing-md: $spacing-unit * 3;
+$spacing-lg: $spacing-unit * 4;
+$spacing-xl: $spacing-unit * 5;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

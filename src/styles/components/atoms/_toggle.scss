@@ -1,0 +1,16 @@
+@use '../../abstracts/_variables' as *;
+
+.toggle {
+    background-color: $white-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+}

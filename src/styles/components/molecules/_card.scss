@@ -1,0 +1,44 @@
+.card {
+    width: 155px;
+    height: 195px;        
+    border-radius: 12px 0 0 12px;
+    background-color: $color-white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+
+    &--reverse{
+        border-radius: 0 12px 12px 0;
+    }
+
+    &__brand {
+        font-size: 12px;
+        font-weight: 500;
+        color: $dark-color;
+    }
+
+    &__image {
+        width: 122px;
+        height: 122px;        
+        object-fit: cover;
+    }
+
+    &__price-rating {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;  
+        font-size: 16px;
+        font-weight: 500;
+        color: $deep-dark-color;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;        
+        right: 0;        
+    }
+}

@@ -1,0 +1,15 @@
+@use '../../abstracts/mixins' as *;
+
+.sku-header {
+    @include flex(column);
+    gap: $spacing-md;
+    
+    &__brand-price {
+        @include flex(row, space-between, center);
+    }
+
+    &__origin-stock {
+        display: inline;
+        color: $secondary-color;
+    }
+}

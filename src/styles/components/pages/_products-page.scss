@@ -1,0 +1,16 @@
+@use '../../abstracts/mixins' as *;
+
+.products-page {
+    @include flex(column, start);
+    gap: $spacing-md;
+
+    &__header{
+        @include flex(column, start);
+        gap: $spacing-sm;
+
+        &--gretting{
+            font-size: 16px;            
+            color: $medium-dark-color;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/variables' as *;
+
+.sku-description {
+    @include flex(column, start);
+    gap: $spacing-md;
+
+    &__body{
+        color: $secondary-color;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        &--expanded {
+            -webkit-line-clamp: unset;
+            max-height: none;
+        }        
+
+        &--read-more{
+            color: $primary-color;
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+        }
+    }
+}

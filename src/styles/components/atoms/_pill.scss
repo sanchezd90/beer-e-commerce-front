@@ -1,0 +1,15 @@
+.pill {
+    background-color: transparent;
+    border-radius: 15.5px;
+    border: 1px solid $color-secondary;    
+    width: 87px;
+    height: 31px;
+    cursor: pointer;
+    &--active {
+        border-color: $color-primary;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}

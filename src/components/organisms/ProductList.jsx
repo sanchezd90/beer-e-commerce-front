@@ -1,0 +1,23 @@
+import React from 'react'
+import { ProductCard } from '../index'
+import { ProductPropTypes } from '../../models/productModel'
+import PropTypes from 'prop-types'
+
+const ProductList = ({products}) => {
+  return (
+    <section className="product-list">     
+        <h2>Our Products</h2>
+        <div className="product-list__grid">
+            {products.map((product, index) => (
+                <ProductCard key={product.id} product={product} reverse={index % 2 === 0} />
+            ))}
+        </div>
+    </section>
+  )
+}
+
+ProductList.propTypes = {
+    products: PropTypes.arrayOf(ProductPropTypes).isRequired
+}
+
+export default ProductList

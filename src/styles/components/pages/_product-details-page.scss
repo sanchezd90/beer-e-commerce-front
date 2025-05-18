@@ -1,0 +1,16 @@
+.product-details-page{
+    @include flex(column, start);
+    gap: $spacing-md;
+
+    &__nav-text{
+       font-size: 18px;
+       font-weight: $font-weight-bold;
+       color: $dark-color;
+    }
+
+    &__image{
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+    }
+}

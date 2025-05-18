@@ -1,0 +1,12 @@
+.product-details {
+    width: 100vw;
+    overflow-x: hidden;
+
+    &__card {
+        margin-left: -9px;
+        @include flex(column);
+        gap: $spacing-md;
+        background-color: $color-white;
+        border-radius: 48px 48px 0 0;    
+    }
+}

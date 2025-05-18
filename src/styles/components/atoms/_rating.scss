@@ -1,0 +1,17 @@
+.rating {
+    width: 36px;
+    height: 12px;
+    display: flex;
+    align-items: space-between;
+    
+    &__star {
+        width: 12px;
+        height: 12px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 500;
+        color: $medium-color;
+    }
+}
