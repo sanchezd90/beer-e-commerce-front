@@ -7,7 +7,7 @@ import { useStockPrice } from '../../../hooks/useStockPrice'
 
 export const ProductCard = ({product, reverse}) => {
 
-    const { data: sku } = useStockPrice(product.skus[0].code)
+    const { data: sku } = useStockPrice(product.skus[0].code, true)
     const navigate = useNavigate()
 
     const handleAddToCart = (e) => {

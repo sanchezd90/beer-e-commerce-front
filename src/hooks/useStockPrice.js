@@ -19,12 +19,12 @@ const fetchStockPrice = async (id) => {
     }
 }
 
-export const useStockPrice = (id) => {    
+export const useStockPrice = (id, disableRefetch = false) => {    
     return useQuery({   
         queryKey: ['stock-price', id],
         queryFn: () => fetchStockPrice(id),
-        refetchInterval: 5000, 
-        refetchIntervalInBackground: true,
+        refetchInterval: disableRefetch ? false : 5000, 
+        refetchIntervalInBackground: !disableRefetch,
         retry: (_failureCount, error) => {
             return !!error.response;
         }
