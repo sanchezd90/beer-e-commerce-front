@@ -5,7 +5,7 @@ This is the frontend application for the Challenge project. It's built with Reac
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
-- Node.js (v18 or higher recommended)
+- Node.js (v22)
 - npm (comes with Node.js)
 - The backend service running (see Backend Service section)
 
